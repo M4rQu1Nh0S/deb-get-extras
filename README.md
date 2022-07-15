@@ -48,7 +48,7 @@ We follow this instructions at deb-get README.md file to create custom inclues:
 >
 >How to use:
 >
->* Manually create the folder `/etc/deb-get.d/` if not exist already. By default `deb-get` does not create this folder unless your specific distribution has packaged it >that way.
+>* Manually create the folder `/etc/deb-get.d/` if not exist already. By default `deb-get` does not create this folder unless your specific distribution has packaged it that way.
 >* Can also create any arbitrary nested sub-folder structure within `/etc/deb-get.d/**/*` main folder
 >* Any files within this tree will be bash sourced in alphabetical order e.g. `. /etc/deb-get.d/01-pending-merge/10-appname1`
 >* Your user custom `deb_*` functions are then loaded directly after the last `deb_*()` package declarations that officially come with `deb-get`
