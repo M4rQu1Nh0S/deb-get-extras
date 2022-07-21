@@ -1,16 +1,18 @@
 function deb_nala() {
-    APT_KEY_URL="https://deb.volian.org/volian/scar.key"
+    ARCHS_SUPPORTED="amd64 arm64 armhf i386"
+    GPG_KEY_URL="https://deb.volian.org/volian/scar.key"
     APT_LIST_NAME="nala"
-    APT_REPO_URL="deb http://deb.volian.org/volian/ scar main"
+    APT_REPO_URL="deb [arch=${HOST_ARCH}, signed-by=/usr/share/keyrings/${APT_LIST_NAME}-archive-keyring.gpg] http://deb.volian.org/volian/ scar main"
     PRETTY_NAME="Nala"
     WEBSITE="https://gitlab.com/volian/nala"
     SUMMARY="Commandline frontend for the APT package manager for Ubuntu 22.04 / Debian Sid and newer."
 }
 
 function deb_nala-legacy() {
-    APT_KEY_URL="https://deb.volian.org/volian/scar.key"
+    ARCHS_SUPPORTED="amd64 arm64 armhf i386"
+    GPG_KEY_URL="https://deb.volian.org/volian/scar.key"
     APT_LIST_NAME="nala-legacy"
-    APT_REPO_URL="deb http://deb.volian.org/volian/ scar main"
+    APT_REPO_URL="deb [arch=${HOST_ARCH}, signed-by=/usr/share/keyrings/${APT_LIST_NAME}-archive-keyring.gpg] http://deb.volian.org/volian/ scar main"
     PRETTY_NAME="Nala Legacy"
     WEBSITE="https://gitlab.com/volian/nala"
     SUMMARY="Commandline frontend for the APT package manager for older distributions like Ubuntu 21.04."
