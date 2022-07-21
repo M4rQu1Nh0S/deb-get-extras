@@ -1,8 +1,14 @@
-function deb_firefox-stable() {
-    if [ "${UPSTREAM_ID}" == "ubuntu" ]; then
-        PPA="ppa:ubuntu-mozilla-security/ppa"
-        PRETTY_NAME="Firefox Stable"
+function deb_firefox() {
+        PPA="ppa:mozillateam/ppa"
+        APT_LIST_NAME="firefox"
+        PRETTY_NAME="Mozilla Firefox"
         WEBSITE="https://www.mozilla.org/firefox/"
         SUMMARY="Safe and easy web browser from Mozilla"
-    fi
+ 
+echo '
+Package: *
+Pin: release o=LP-PPA-mozillateam
+Pin-Priority: 1001' | sudo tee /etc/apt/preferences.d/mozilla-firefox
+ 
+echo 'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codename}";' | sudo tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox
 }
