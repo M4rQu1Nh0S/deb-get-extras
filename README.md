@@ -77,7 +77,7 @@ cog.out(pretty_list)
 ]]] -->
 | Source   | Package Name   | Description   |
 | :------: | :------------- | :------------ |
-| [<img src=".github/launchpad.png" align="top" width="20" />](https://www.mozilla.org/firefox/) | `firefox-stable` | <i> Safe and easy web browser from Mozilla.</i> |
+| [<img src=".github/launchpad.png" align="top" width="20" />](https://www.mozilla.org/firefox/) | `firefox` | <i> Safe and easy web browser from Mozilla.</i> |
 | [<img src=".github/gitlab.png" align="top" width="20" />](https://gitlab.com/volian/nala) | `nala` | <i> Commandline frontend for the APT package manager for Ubuntu 22.04 / Debian Sid and newer.</i> |
 | [<img src=".github/gitlab.png" align="top" width="20" />](https://gitlab.com/volian/nala) | `nala-legacy` | <i> Commandline frontend for the APT package manager for older distributions like Ubuntu 21.04.</i> |
 
