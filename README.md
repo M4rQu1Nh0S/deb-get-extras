@@ -24,7 +24,7 @@
 1. Use **install.sh** file to auto install:
 ```
 sudo apt install -y curl
-curl -sL https://raw.githubusercontent.com/M4rQu1Nh0S/deb-get-extras/main/install.sh | sudo -E bash install.sh"
+curl -sL https://raw.githubusercontent.com/M4rQu1Nh0S/deb-get-extras/main/install.sh | sudo -E bash install.sh
 ```
 ##### Step by step
 
