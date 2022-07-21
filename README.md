@@ -19,26 +19,34 @@
 *To use `deb-get-extras` you need install the `deb-get` first <br/>
 [https://github.com/wimpysworld/deb-get#install](https://github.com/wimpysworld/deb-get#install)*
 
+##### With install.sh
+
+1. Use **install.sh** file to auto install:
+```
+sudo apt install -y curl
+curl -sL https://raw.githubusercontent.com/M4rQu1Nh0S/deb-get-extras/main/install.sh | sudo -E bash install.sh"
+```
+##### Step by step
+
 1. Clone this repository with:
 ```
-$ git clone https://github.com/M4rQu1Nh0S/deb-get-extras.git && cd deb-get-extras
+git clone https://github.com/M4rQu1Nh0S/deb-get-extras.git && cd deb-get-extras
 ```
 
 2. Create the directory `/etc/deb-get.d` (directory used for **Custom User Includes**) 
 ```
-$ sudo mkdir /etc/deb-get.d/
+sudo mkdir /etc/deb-get.d/
 ```
 
 3. Copy the folder `01-deb-get-extras` to /etc/deb-get.d/
 ```
-$ sudo cp -r ./01-deb-get-extras /etc/deb-get.d
+sudo cp -r ./01-deb-get-extras /etc/deb-get.d
 ```
 
 4. Update the `deb-get`
 ```
-$ deb-get update
+deb-get update
 ```
-
 ## How we add more repositories
 We follow this instructions at deb-get README.md file to create custom inclues:
 
