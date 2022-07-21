@@ -30,7 +30,7 @@ curl -sL https://raw.githubusercontent.com/M4rQu1Nh0S/deb-get-extras/main/instal
 
 1. Clone this repository with:
 ```
-git clone https://github.com/M4rQu1Nh0S/deb-get-extras.git && cd deb-get-extras
+git clone https://github.com/M4rQu1Nh0S/deb-get-extras.git
 ```
 
 2. Create the directory `/etc/deb-get.d` (directory used for **Custom User Includes**) 
@@ -40,12 +40,17 @@ sudo mkdir /etc/deb-get.d/
 
 3. Copy the folder `01-deb-get-extras` to /etc/deb-get.d/
 ```
-sudo cp -r ./01-deb-get-extras /etc/deb-get.d
+sudo cp -r ./deb-get-extras/01-deb-get-extras /etc/deb-get.d
 ```
 
 4. Update the `deb-get`
 ```
 deb-get update
+```
+
+5. Delete deb-get-extras folder
+```
+sudo rm -r deb-get-extras
 ```
 ## How we add more repositories
 We follow this instructions at deb-get README.md file to create custom inclues:
