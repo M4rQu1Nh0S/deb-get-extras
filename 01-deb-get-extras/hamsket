@@ -1,0 +1,11 @@
+function deb_hamsket() {
+    ARCHS_SUPPORTED="amd64 i386"
+    get_github_releases "https://api.github.com/repos/TheGoddessInari/hamsket/releases/tags/nightly"
+    if [ "${ACTION}" != "prettylist" ]; then
+        URL=$(grep "browser_download_url.*${HOST_ARCH}.deb" "${CACHE_DIR}/${APP}.json" | grep -v musl | head -n1 | cut -d'"' -f4)
+        VERSION_PUBLISHED="$(echo "${URL}" | cut -d'_' -f2)"
+    fi
+    PRETTY_NAME="hamsket"
+    WEBSITE="https://github.com/TheGoddessInari/hamsket"
+    SUMMARY="Free, Open Source and Cross Platform messaging and emailing app that combines common web applications into one. "
+}
